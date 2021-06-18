@@ -23,7 +23,21 @@ class Result
 
     public static void miniMaxSum(List<int> arr)
     {
+       int sayac = arr.Count();
+       List<int> Result =new List<int>();
+       List<int> KucukBuyuk =new List<int>(sayac);
+       arr.Sort();
        
+       int minum = arr.Min();
+       int maxim=arr.Max();
+       int toplam=0;
+       for(int i=0;i<sayac;i++)
+       {
+           toplam =toplam+arr[i];
+       }
+       Console.Write(toplam-maxim);
+       Console.Write(' ');
+       Console.Write(toplam-minum);
     }
 
 }
